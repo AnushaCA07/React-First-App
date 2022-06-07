@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 // import CourseList from '../src/CourseList';
 import Navbar from '../src/Navbar';
@@ -18,14 +18,13 @@ const menu = [
   {
     Name: "Health A to Z",
     Url:""
-  }];
+  }
+];
 
 function App() {
   return (
-      <div>
+      <div class="row">
         <Navbar menu = {menu}/>
-
-          
       </div>
   ); 
 }
