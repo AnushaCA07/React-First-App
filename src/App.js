@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import FirstComponent from "./FirstComponent";
 import Registration from './Registration';
 import Confirmation from './Confirmation';
+import Verify from './Verify';
 
 function App() {
   const [counter, increment] = React.useState(0); // state variable  
@@ -12,9 +13,10 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <Registration  />
       <Confirmation />
+      <Verify/>
     </div>
   );
 }
