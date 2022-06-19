@@ -3,7 +3,7 @@ import './App.css';
 import React, { useState } from "react";
 import FirstComponent from "./FirstComponent";
 import Registration from './Registration';
-import confirmation from './confirmation';
+import Confirmation from './Confirmation';
 
 function App() {
   const [counter, increment] = React.useState(0); // state variable  
@@ -12,15 +12,9 @@ function App() {
 
   return (
     <div className="App">
-
-      {/* calling FirstComponent component */}
-      {/* <FirstComponent name="SampleData" id="1044" />props => Passing data to another components */}
+      
       <Registration  />
-      <confirmation />
-
-      {/* <p>{counter}</p>
-      <button onClick={increm}>Click</button> */}
-
+      <Confirmation />
     </div>
   );
 }

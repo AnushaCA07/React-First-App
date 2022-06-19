@@ -1,6 +1,6 @@
 import React from "react";
 
-function confirmation(props){
+function Confirmation(props){
     return(
         <div>
             <form className="body">
@@ -14,3 +14,5 @@ function confirmation(props){
     );
     
 }
+
+export default Confirmation;
