@@ -1,34 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react'
 
+import CountdownTimer from './CountDownTimer';
+
 function Confirmation(props) {
 
-    const [timer, setTimer] = useState('00:00:00');
+    const NOW_IN_MS = new Date().getTime();
 
-    
-        const {initialMinute = 0,initialSeconds = 0} = props;
-        const [ minutes, setMinutes ] = useState(initialMinute);
-        const [seconds, setSeconds ] =  useState(initialSeconds);
-
-        useEffect(()=>{
-        let myInterval = setInterval(() => {
-                if (seconds > 0) {
-                    setSeconds(seconds - 1);
-                }
-                if (seconds === 0) {
-                    if (minutes === 0) {
-                        clearInterval(myInterval)
-                    } else {
-                        setMinutes(minutes - 1);
-                        setSeconds(59);
-                    }
-                } 
-            }, 1000)
-            return ()=> {
-                clearInterval(myInterval);
-              };
-        });
-    
-
+    const tenmindateTime = NOW_IN_MS + 60 * 10000;
 
     return (
         <div>
@@ -39,13 +17,11 @@ function Confirmation(props) {
                     <label for="verify" className="lable2"><b>Please Enter Your Verification Code</b></label><br></br>
                     <input type="text" placeholder="Enter Your Verification Code" name="verify" id="verify"/><br></br>
                     <p>This code will expire in</p>
-                    <h2>{timer}</h2>
                     
-
-                    <div>
-                        <h1> {minutes}:{seconds}</h1> 
-                    </div>
-
+                    <CountdownTimer targetDate={tenmindateTime} />              
+                    
+                    <h1>Countdown Timer</h1>
+      
                     <p>This code will expire immediatley if you leave this page.</p>
 
                     <button type="button" className="button2">Submit Registration</button>
