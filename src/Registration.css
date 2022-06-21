@@ -103,3 +103,22 @@ a {
   align-items: center;
 }
 
+td {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border: none;
+}
+
+td:nth-child(even) {
+  border-left: solid 1px gray;
+}
+

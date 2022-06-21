@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { useState } from "react";
-import FirstComponent from "./FirstComponent";
+// import FirstComponent from "./FirstComponent";
 import Registration from './Registration';
 import Confirmation from './Confirmation';
 import Verify from './Verify';
@@ -15,8 +15,6 @@ function App() {
 
   return (
     <div className="App">
-
-
 <Tabs>
 
     <TabList>
@@ -35,9 +33,6 @@ function App() {
     <Verify/>
     </TabPanel>
   </Tabs>
-
-      
-      
     </div>
   );
 }
