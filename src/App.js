@@ -19,18 +19,18 @@ function App() {
 
     <TabList>
       <Tab> Registration </Tab>
-      <Tab> Confirmation </Tab>
       <Tab> Verify </Tab>
+      <Tab> Confirmation </Tab>
     </TabList>
 
     <TabPanel>
     <Registration  />
     </TabPanel>
     <TabPanel>
-    <Confirmation />
+    <Verify/>
     </TabPanel>
     <TabPanel>
-    <Verify/>
+    <Confirmation />
     </TabPanel>
   </Tabs>
     </div>

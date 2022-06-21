@@ -1,6 +1,35 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from 'react'
 
 function Confirmation(props) {
+
+    const [timer, setTimer] = useState('00:00:00');
+
+    
+        const {initialMinute = 0,initialSeconds = 0} = props;
+        const [ minutes, setMinutes ] = useState(initialMinute);
+        const [seconds, setSeconds ] =  useState(initialSeconds);
+
+        useEffect(()=>{
+        let myInterval = setInterval(() => {
+                if (seconds > 0) {
+                    setSeconds(seconds - 1);
+                }
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        clearInterval(myInterval)
+                    } else {
+                        setMinutes(minutes - 1);
+                        setSeconds(59);
+                    }
+                } 
+            }, 1000)
+            return ()=> {
+                clearInterval(myInterval);
+              };
+        });
+    
+
+
     return (
         <div>
             <form className="body">
@@ -8,8 +37,14 @@ function Confirmation(props) {
                     <h5 >You're almost done!</h5>
                     <p>A verification code has been sent to 720-123-1111 but will expire soon</p>
                     <label for="verify" className="lable2"><b>Please Enter Your Verification Code</b></label><br></br>
-                    <input type="text" placeholder="Enter Your Verification Code" name="verify" id="verify" required /><br></br>
+                    <input type="text" placeholder="Enter Your Verification Code" name="verify" id="verify"/><br></br>
                     <p>This code will expire in</p>
+                    <h2>{timer}</h2>
+                    
+
+                    <div>
+                        <h1> {minutes}:{seconds}</h1> 
+                    </div>
 
                     <p>This code will expire immediatley if you leave this page.</p>
 
