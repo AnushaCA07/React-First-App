@@ -4,7 +4,8 @@ import React, { useState } from "react";
 // import FirstComponent from "./FirstComponent";
 import Registration from './Registration';
 import Confirmation from './Confirmation';
-import Verify from './Verify';
+import Verify from './Verify'; 
+import Confirmidentity from './Confirmidentity';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
@@ -21,6 +22,7 @@ function App() {
       <Tab> Registration </Tab>
       <Tab> Verify </Tab>
       <Tab> Confirmation </Tab>
+      <Tab> Confirmidentity </Tab>
     </TabList>
 
     <TabPanel>
@@ -31,6 +33,9 @@ function App() {
     </TabPanel>
     <TabPanel>
     <Confirmation />
+    </TabPanel>
+    <TabPanel>
+      <Confirmidentity/>
     </TabPanel>
   </Tabs>
     </div>
