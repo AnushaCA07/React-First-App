@@ -19,7 +19,9 @@ function Confirmidentity(){
                     </ul>
                     <div className="checkbox">
                         <input type="checkbox" /> <label>I confirm that I am authorised to act on[provider's First,Last Name]behalf<a></a> </label><br></br>
+                        <button type="button" className="button">Continue</button>
                     </div>
+                    <p>Or you can confirm your identity by downloading the farm below and faxing your informaton to us.We will let you know once we authorized your account.</p>
                 </div>
                 </form>
             </div>
