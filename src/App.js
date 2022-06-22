@@ -35,7 +35,7 @@ function App() {
     <Confirmation />
     </TabPanel>
     <TabPanel>
-      <Confirmidentity/>
+    <Confirmidentity/>
     </TabPanel>
   </Tabs>
     </div>
