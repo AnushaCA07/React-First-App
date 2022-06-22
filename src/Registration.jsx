@@ -9,7 +9,7 @@ function Registration(props) {
            <p>{props.id}</p> */}
 
             <form className="body">
-                <div class="container">
+                <div className="container">
                     <h5>Get Registered</h5>
                     <div>
                         <div className="radio">
@@ -26,10 +26,10 @@ function Registration(props) {
 
                     </div>
 
-                    <label for="email" className="lable1"><b>Email</b></label><br></br>
+                    <label className="lable1"><b>Email</b></label><br></br>
                     <input type="text" placeholder="Enter your Email" name="email" id="email" required /><br></br>
 
-                    <label for="psw" className="lable"><b>Password</b></label><br></br>
+                    <label className="lable"><b>Password</b></label><br></br>
                     <input type="password" placeholder="Create New Password" name="psw" id="psw" required /><br></br>
 
                     <div className="checkbox">
@@ -37,7 +37,7 @@ function Registration(props) {
                     </div>
                     
                     <button type="button" className="button1">Cancel</button>
-                    <div class="space">
+                    <div className="space">
                     </div>
                     <button type="button" className="button">Continue</button>
                     

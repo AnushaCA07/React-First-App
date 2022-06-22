@@ -4,10 +4,10 @@ function Verify() {
 
                 <div>
                     <form className="body">
-                        <div class="container">
+                        <div className="container">
                             <h5>Request your verification code</h5>
                             <p>Please select how you would like to receive your verification code:</p>
-                            <label for="num" className="lable2"><b>Please Enter Your Mobile Number</b></label><br></br>
+                            <label className="lable2"><b>Please Enter Your Mobile Number</b></label><br></br>
                             <input type="text" placeholder="Enter Your Mobile Number" name="num" id="num" required /><br></br>
 
                             <p>* Must be able to receive text messages. Message and data rates may apply</p>
@@ -20,6 +20,7 @@ function Verify() {
                                 <hr></hr>
 
                             <table>
+                            <tbody>
                             <td colSpan={2}>
                                 <p><b>Didn't find what you need or still have questions?</b>That's ok, we're here to help.</p>
                                 </td>;
@@ -48,7 +49,7 @@ function Verify() {
                                         outside of business hours
                                     </td>
                                 </tr>
-                               
+                                </tbody>
                             </table>
                         </div>
                     </form>

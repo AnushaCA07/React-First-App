@@ -2,12 +2,12 @@ function Confirmidentity(){
         return(
             <div>
                 <form className="body">
-                <div class="container">
+                <div className="container">
                     <h5>Conform your identity</h5>
                     <p>Healthgrades ensures only providers, and those authorised by providers, can modify
                         profiles.
                     </p>
-                    <label for="num" className="lable2"><b>Enter DEA number</b></label><br></br>
+                    <label className="lable2"><b>Enter DEA number</b></label><br></br>
                     <input type="text" placeholder="Enter the last 4 characters of your DEA" name="num" id="num" required /><br></br>
                     <h5>Note:</h5>
                     <ul>
