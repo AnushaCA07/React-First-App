@@ -1,14 +1,14 @@
 .timer-border{   
     display: inline-block;
     border-style: outset;
-    padding: 8px;
-    margin: 6px;
+    padding: 0px 2px 0px 2px;
+    margin: 2px;
 }
 .timer-text{
-    font-size: 16px;
-    margin-right: 20px;
+    font-size: 14px;
+    margin: 0px 18px 0px 0px;   
 }
 .timer-display{
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
 }
