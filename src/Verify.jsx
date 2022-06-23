@@ -1,3 +1,9 @@
+import smsicon from '../src/images/smsicon.svg';
+import callicon from '../src/images/smsicon.svg';
+
+
+
+
 function Verify() {
 
             return (
@@ -7,6 +13,14 @@ function Verify() {
                         <div className="container">
                             <h5>Request your verification code</h5>
                             <p>Please select how you would like to receive your verification code:</p>
+
+                            <div>
+                                <img src={smsicon} width="100" height="50" />
+                            </div>
+                            <div>                      
+                                <img src={callicon} width="100" height="50" />
+                            </div>
+                        <br></br>
                             <label className="lable2"><b>Please Enter Your Mobile Number</b></label><br></br>
                             <input type="text" placeholder="Enter Your Mobile Number" name="num" id="num" required /><br></br>
 
