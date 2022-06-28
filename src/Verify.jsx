@@ -1,6 +1,7 @@
 import smsicon from '../src/images/smsicon.svg';
 import callicon from '../src/images/smsicon.svg';
 
+import './Verify.css'
 
 
 
@@ -14,12 +15,33 @@ function Verify() {
                             <h5>Request your verification code</h5>
                             <p>Please select how you would like to receive your verification code:</p>
 
-                            <div>
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <div className='voice-border'>
                                 <img src={smsicon} width="100" height="50" />
                             </div>
-                            <div>                      
+            </td>
+            <td>
+            <div className='voice-border'>
                                 <img src={callicon} width="100" height="50" />
                             </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                SMS
+            </td>
+            <td>
+                Voice
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+                            
                         <br></br>
                             <label className="lable2"><b>Please Enter Your Mobile Number</b></label><br></br>
                             <input type="text" placeholder="Enter Your Mobile Number" name="num" id="num" required /><br></br>

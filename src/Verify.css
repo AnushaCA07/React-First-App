@@ -1,0 +1,6 @@
+.voice-border{   
+    display: inline-block;
+    border-style: outset;
+    padding: 8px;
+    margin: 6px;
+}
