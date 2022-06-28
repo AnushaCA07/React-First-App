@@ -14,6 +14,16 @@ function Verify() {
                         <div className="container">
                             <h5>Request your verification code</h5>
                             <p>Please select how you would like to receive your verification code:</p>
+                        
+                        <br></br>
+                        <div className='float-container'>
+                            <div className='float-child border-outset-style'>
+                                <img src={smsicon} />
+                            </div>
+                            <div className='float-child border-outset-style'>                      
+                                <img src={callicon} />
+                            </div>   
+                        </div>
 
 <table>
     <tbody>
@@ -57,10 +67,11 @@ function Verify() {
 
                             <table>
                             <tbody>
+                            <tr>
                             <td colSpan={2}>
                                 <p><b>Didn't find what you need or still have questions?</b>That's ok, we're here to help.</p>
-                                </td>;
-                                
+                                </td>   
+                                </tr>                             
                                 <tr>
                                     <td>
                                         <b>1-855-459-8427</b>

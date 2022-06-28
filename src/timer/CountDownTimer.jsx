@@ -9,7 +9,7 @@ const CountDownTimer = ({ targetDate }) => {
       <div>
          
          <div className="timer-display"><span className="timer-border">{String(minutes)[0]}</span><span className="timer-border">{String(minutes)[1]}</span> <span>:</span> <span className="timer-border">{String(seconds)[0]}</span><span className="timer-border">{String(seconds)[1]}</span> </div>
-         <span className="timer-text" >Minutes</span> <span> </span> <span style={{ font : "16px;" }}>Seconds</span>
+         <div className="timer-text"><span style={{margin: "0px 18px 0px 0px;"}}>Minutes</span> <span> </span> <span>Seconds</span></div>
 
       </div>
     );
