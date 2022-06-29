@@ -1,0 +1,122 @@
+@import '../../styles/_globalstyle';
+
+.provider-details {
+  font-family: 'OpenSans-Regular' !important;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.6rem;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: left !important;
+
+  .provider-info-container {
+    width: 24%;
+    display: flex;
+    word-break: break-word;
+  }
+
+  div {
+    display: flex;
+    width: 25%;
+    vertical-align: middle;
+    margin: auto;
+    word-break: break-word;
+
+    span {
+      font-weight: bold;
+    }
+
+    p {
+      margin-block-end: 0px;
+      margin-block-start: 0px;
+    }
+  }
+
+  .provider-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+
+    .sponsor {
+      padding-left: 1.6rem;
+      vertical-align: text-bottom;
+    }
+
+    a {
+      text-decoration: none;
+      color: @neonBlue;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+  }
+
+  .practice-container {
+    flex-direction: column;
+    width: 33%;
+    word-break: break-word;
+
+    .contact-info {
+      margin-top: 0.5rem;
+    }
+
+    img {
+      margin-right: 0.8rem;
+    }
+  }
+
+  .sponsor-info {
+    display: block;
+    width: 18%;
+    margin: auto;
+    word-break: break-word;
+
+    span {
+      font-weight: bold;
+    }
+
+    p {
+      margin-block-end: 0px;
+      margin-block-start: 0px;
+    }
+  }
+}
+
+.alternate-background {
+  background: @lynx;
+}
+
+@media (max-width: @md) {
+  .provider-details {
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .provider-info-container {
+      width: 100%;
+      padding-bottom: 0.5rem;
+      padding-left: 1.5rem;
+    }
+
+    div {
+      width: 100%;
+      padding-bottom: 1.5rem;
+      padding-left: 2.5rem;
+    }
+
+    .practice-container {
+      width: 100%;
+      padding-left: 2.5rem;
+    }
+
+    .sponsor-info {
+      width: 100%;
+
+    }
+  }
+}

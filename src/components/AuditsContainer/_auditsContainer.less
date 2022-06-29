@@ -1,0 +1,202 @@
+/** @format */
+
+@import '../../styles/_globalstyle';
+
+.container-wrapper {
+  background-color: @azure;
+  border-top: 1px solid @athensGrey;
+  border-bottom: 1px solid @athensGrey;
+  text-align: center;
+  height: 100px !important;
+  color: @black !important;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 3.8rem;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    font-family: 'Raleway-Light' !important;
+  }
+}
+.tabs {
+  margin-top: 2.7rem;
+  margin-bottom: 3.5rem;
+  display: flex;
+  width: 85%;
+  left: 7.5%;
+  right: 7.5%;
+  height: 48px;
+  position: relative;
+  border-bottom: 1px solid @thistle;
+
+  .tab-1 {
+    background: @paleCyan;
+    width: 131px;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 1rem;
+    cursor: pointer;
+
+    span {
+      font-family: 'OpenSans-Regular' !important;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      text-align: center;
+      color: @gray20;
+    }
+  }
+  .tab-2 {
+    background: @whiteSmoke;
+    width: 131px;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 1rem;
+    cursor: pointer;
+
+    span {
+      font-family: 'OpenSans-Regular' !important;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      text-align: center;
+      color: @gray20;
+    }
+  }
+  .margin-left {
+    margin-left: 1rem;
+  }
+}
+.audit-header {
+  position: relative;
+  width: 85%;
+  left: 7.5%;
+  right: 7.5%;
+}
+
+.audit-search {
+  width: 85%;
+  left: 0rem;
+}
+
+.pagination-section {
+  width: 85%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: @md) {
+  .audit-search {
+    width: 100%;
+    left: 0rem;
+    margin-top: 4rem !important;
+
+    .top-search-container {
+      .search-container {
+        width: 92%;
+        height: 13.5rem;
+
+        .inner-container {
+          flex-wrap: wrap;
+
+          .radiobtn-container {
+            margin-left: -0.19px;
+          }
+        }
+        .margin-top-15 {
+          .search-wrapper {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .search-provider {
+              width: 100%;
+              .height-fix {
+                width: 100%;
+              }
+            }
+            .search-section {
+              right: 4% !important;
+              top: 45% !important;
+              left: inherit !important;
+            }
+            .drop-down {
+              display: none !important;
+            }
+          }
+        }
+
+        .search-inner-wrapper {
+          width: 70% !important;
+        }
+
+        .create-btn {
+          width: 100%;
+          margin-top: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .tabs {
+    top: 2.7rem;
+    margin: 0 auto;
+    width: 95%;
+    left: 0 !important;
+  }
+}
+
+@media (min-width: 800px) and (max-width: @xl) {
+  .audit-search {
+    width: 100%;
+    left: 0rem;
+    margin-top: 4rem !important;
+
+    .top-search-container {
+      .search-container {
+        .margin-top-15 {
+          .search-wrapper {
+            width: 100%;
+            flex-direction: row;
+            height: 48px !important;
+
+            .search-provider {
+              width: 100%;
+              .height-fix {
+                width: 100%;
+              }
+            }
+            .search-section {
+              left: 47% !important;
+            }
+            .drop-down {
+              display: none !important;
+            }
+
+            .reset-section {
+              width: 100%;
+              .reset-btn {
+                height: 100% !important;
+                padding-left: 2rem;
+                padding-right: 2rem;
+              }
+            }
+          }
+
+          .search-inner-wrapper {
+            width: 70% !important;
+          }
+        }
+
+        .create-btn {
+          width: 35%;
+        }
+      }
+    }
+  }
+}

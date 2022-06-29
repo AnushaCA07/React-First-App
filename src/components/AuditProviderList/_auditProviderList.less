@@ -1,0 +1,24 @@
+/** @format */
+
+@import '../../styles/_globalstyle';
+.audit-provider-list {
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+
+  .accordion {
+    .accordion__item {
+      background-color: @paleCyan !important;
+    }
+    .accordion__panel {
+      margin-top: -2% !important;
+      padding-bottom: 30px !important;
+    }
+  }
+}
+
+@media (max-width: @md) {
+  .audit-provider-list {
+    width: 95%;
+  }
+}

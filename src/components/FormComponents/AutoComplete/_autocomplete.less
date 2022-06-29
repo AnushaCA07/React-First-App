@@ -1,0 +1,49 @@
+@import '../../../styles/_globalstyle.less';
+.autosuggest-container {
+  .suggestions {
+    list-style: none;
+    margin-top: 0;
+    overflow-y: auto;
+    padding-left: 0;
+    background-color: #fff;
+    color: #000;
+    z-index: 1000;
+    position: absolute;
+    border: 1px solid #E3E3E3;
+    width: 100%;
+  }
+  ul:empty {
+    border: none !important;
+  }
+  .suggestions li {
+    padding: 2rem 1.5rem;
+    font-weight: 400;  
+  }
+
+  .suggestion-active,
+  .suggestions li:hover {
+    background-color: #F7F7F7;
+    color: #4A4A4D;
+    cursor: pointer;   
+  }
+
+  input:focus ~ .floating-label,
+  input:not([value='']) ~ .floating-label {
+    top: 2%;
+  }
+
+  .floating-label {
+    pointer-events: none;
+    top: 4%;
+    color: @darkGray;
+    position: absolute;
+    transition: 0.2s ease all;
+  }
+  input {
+    padding-left: 16px !important;
+    padding-bottom: 12px !important;
+    border: 1px solid #9d9ea1;
+    height: 48px;
+    font-size: 16px;
+  }
+}

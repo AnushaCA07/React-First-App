@@ -9,6 +9,8 @@ import Confirmidentity from './Confirmidentity';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
+import Body from '../src/components/ClaimYourProfile/Body';
+
 function App() {
   const [counter, increment] = React.useState(0); // state variable  
   //=> increment is method to change state value
@@ -26,7 +28,8 @@ function App() {
     </TabList>
 
     <TabPanel>
-    <Registration  />
+    {/* <Registration  /> */}
+    <Body />
     </TabPanel>
     <TabPanel>
     <Verify/>

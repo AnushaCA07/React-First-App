@@ -1,0 +1,48 @@
+@import '../../styles/_globalstyle';
+
+.roster-list {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  .header-section {
+    .header-container {
+      .header span:last-child {
+        text-align: center;
+        display: inline;
+        width: 25px;
+      }
+
+      .header {
+        .name {
+          .sort {
+            padding-left: 1rem !important;
+          }
+        }
+      }
+    }
+
+    .header-container .header .search:last-child {
+      div {
+        display: block !important;
+      }
+    }
+  }
+}
+
+@media (max-width: @md) {
+  .roster-list {
+    margin-top: 6rem;
+    width: 92%;
+
+    .header-section {
+      .header-container {
+        .header span:last-child {
+          text-align: center;
+          display: inline;
+        }
+      }
+    }
+  }
+}

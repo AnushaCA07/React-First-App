@@ -1,0 +1,179 @@
+/** @format */
+@import '../../../styles/_globalstyle.less';
+
+.menu-container {
+  display: flex;
+  height: 7.2rem !important;
+  border-bottom: 1px solid @brightGrey;
+
+  .logo {
+    vertical-align: middle;
+    display: flex;
+    width: 25%;
+    a {
+      display: flex;
+    }
+  }
+  img {
+    margin-left: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .inner-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 85%;
+    ul {
+      list-style-type: none;
+      margin-top: 1rem;
+      display: flex;
+      white-space: nowrap;
+      li {
+        display: flex;
+        margin-right: 2.4rem;
+        width: 100% !important;
+        a {
+          color: @midnightBlue;
+          font-weight: 600;
+          cursor: pointer !important;
+        }
+        a:hover {
+          .hover-line();
+        }
+      }
+      .hover-line {
+        font-weight: 600;
+        border-bottom: 6px solid @newBlue;
+        padding: 0px 0px 1.9rem 0px !important;
+      }
+      button {
+        border-color: @newBlue;
+        color: @newBlue;
+      }
+    }
+    .left-arrow {
+      display: none;
+    }
+    .right-arrow {
+      display: none;
+    }
+  }
+
+  .btn-right {
+    margin-top: auto;
+    margin-bottom: auto;
+    .btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      width: 11rem;
+      height: 4rem;
+      right: 13px;
+      top: 16px;
+      border: 1px solid #3d3e97;
+      border-radius: 99px;
+      background-color: @white;
+      color: #3d3e97;
+      font-family: 'Mark OT' !important;
+      font-weight: 800;
+      font-size: 14px;
+    }
+  }
+}
+
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: @md) {
+  .menu-container {
+    flex-direction: column;
+    height: 7rem !important;
+    z-index: 9999;
+    .logo {
+      width: 80%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      a {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+    img {
+      margin-left: 0px !important;
+    }
+
+    .inner-container {
+      display: flex;
+      width: 100%;
+      flex-direction: row-reverse;
+      border-top: 1px solid #626366;
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+      ul {
+        width: 80%;
+        margin: 0px auto;
+        display: flex;
+        overflow-x: auto;
+        padding-left: 0px;
+        height: 2.5rem;
+        li {
+          display: flex;
+          white-space: nowrap;
+          margin-right: 1.4rem;
+          a {
+            display: flex;
+          }
+        }
+        .hover-line {
+          padding: 0px 0px 0.5rem 0px !important;
+        }
+      }
+      .left-arrow {
+        display: block;
+        cursor: pointer !important;
+        padding-right: 0.8rem !important;
+        margin-top: -1rem;
+      }
+      .right-arrow {
+        display: block;
+        cursor: pointer !important;
+        padding-left: 0.5rem;
+        margin-top: -1rem;
+      }
+    }
+
+    .btn-right {
+      width: 20%;
+      .btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 7rem;
+        height: 3rem;
+        right: 0px;
+        top: 12px;
+        border: 1px solid #3d3e97;
+        border-radius: 99px;
+        background-color: @white;
+        color: #3d3e97;
+        font-family: 'Mark OT' !important;
+        font-weight: 800;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .menu-height {
+    height: 5rem !important;
+  }
+}

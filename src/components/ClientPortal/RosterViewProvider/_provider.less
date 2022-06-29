@@ -1,0 +1,292 @@
+@import '../../../styles/_dashboardglobalstyle.less';
+@import '../../../styles/_globalCommonStyle';
+
+.providerInRoster-details-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #e3e3e3;
+  border-top: none;
+  .providerInRoster-details {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: left !important;
+    position: relative;
+    .providerInRoster-info-container {
+      width: 33%;
+      display: flex;
+      word-break: break-word;
+      margin-left: 5%;
+      .checkbox {
+        margin-left: 2.5%;
+      }
+    }
+    div {
+      display: flex;
+      width: 30%;
+      vertical-align: middle;
+      margin: auto;
+      word-break: break-word;
+      span {
+        font-weight: 700;
+      }
+      p {
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        font-weight: 400 !important;
+        font-size:14px !important;
+      }
+    }
+    .providerInRoster-typeID {
+      display: flex;
+      flex-direction: column;
+      width: 28%;
+      margin: auto;
+      word-break: break-word;
+      .tags_e {
+        width: 53%;
+        padding: 0.4rem 1.5rem;
+        height: 20px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background: #ffffff;
+        border: 1px solid #207e99;
+        color: #207e99;
+        justify-content: center;
+        font-size: x-small;
+        text-align: center !important;
+        margin-bottom: 1rem;
+        align-items: center;
+        display: flex;
+      }
+      .tags_a {
+        width: 53%;
+        padding: 0.4rem 1.5rem;
+        height: 20px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background: #ffffff;
+        border: 1px solid #295afb;
+        color: #295afb;
+        justify-content: center;
+        font-size: x-small;
+        text-align: center !important;
+        margin-bottom: 1rem;
+        align-items: center;
+        display: flex;
+      }
+      .tags_s {
+        width: 53%;
+        padding: 0.4rem 1.5rem;
+        height: 20px;
+        background: #ffffff;
+        border: 1px solid #626366;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: #626366;
+        font-size: x-small;
+        justify-content: center;
+        text-align: center !important;
+        margin-bottom: 1rem;
+        align-items: center;
+        display: flex;
+      }
+      span {
+        font-weight: normal !important;
+        font-size: 14px;
+      }
+    }
+    .providerInRoster-info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-right: 1rem;
+      a {
+        text-decoration: none;
+        color: #4a4a4d !important;
+        font-weight: 700;
+        font-size: 16px;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    .providerInRoster-info-container {
+      width: 30%;
+    }
+    .practice-container {
+      flex-direction: column;
+      width: 46%;
+      word-break: break-word;
+      padding-right: 3%;
+      .contact-info {
+        margin-top: 0.5rem;
+      }
+      img {
+        margin-right: 0.8rem;
+      }
+    }
+    .percentage {
+      padding-right: 6%;
+      width: 20%;
+    }
+    .profile-views {
+      width: 21%;
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .lastAccessedBy-info {
+      display: block;
+      flex-direction: column !important;
+      width: 23%;
+      padding-right: 4rem;
+      margin: auto;
+      word-break: break-word;
+      span {
+        font-weight: 400;
+        font-size: 14px;
+      }
+      p {
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        color: #4a4a4d;
+      }
+    }
+    .remove-onhover {
+      width: 2% !important;
+      height: 100%;
+      color: transparent !important;
+      right: 14px;
+      position: absolute;
+      cursor: pointer;
+      top: 2px;
+      :hover{
+        cursor: pointer;
+      }
+    }
+  }
+  .alternate-background {
+    background: @lynx;
+  }
+}
+
+.percentage-symbol {
+  font-size: 8px !important;
+}
+
+.roster-modal{
+  margin-top: 5rem !important;
+  padding-top: 1rem !important;
+.roster-modal-container {
+  padding-top: 1%;
+  padding-left: 5.5%;
+  padding-right: 5.5%;
+  padding-bottom: 1.5%;
+
+  .roster-modal-header {
+    width: 100%;
+    height: 4.5rem;
+
+    h1 {
+      font-family: 'Raleway-Light' !important;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 2.3rem;
+    }
+  }
+
+  .roster-modal-footer {
+    margin-top: 3%;
+    position: relative;
+    display: flex;
+    min-height: 5.7rem;
+    button {
+      position: relative;
+      width: 27.5% !important;
+      cursor: pointer;
+      left: 45%;
+    }
+
+    .cancel-btn {
+      background-color: @white;
+      color: @neonBlue;
+      border-radius: 2px;
+      border: 0px;
+      font-weight: normal;
+      font-family: 'OpenSans-Regular' !important;
+      cursor: unset;
+    }
+  }
+}
+}
+
+@media (max-width: @md) {
+  .providerInRoster-details-container {
+    .providerInRoster-details {
+      flex-wrap: wrap;
+      flex-direction: row;
+      .providerInRoster-info-container {
+        width: 100%;
+        padding-bottom: 0.5rem;
+        .checkbox {
+          display: none !important;
+          width: auto;
+        }
+      }
+      div {
+        width: 100%;
+        padding-bottom: 1.5rem;
+      }
+      .providerInRoster-typeID {
+        width: 100%;
+        padding-left: 2.5rem;
+        .tags_a {
+          width: 8%;
+        }
+        .tags_e {
+          width: 8%;
+        }
+        .tags_s {
+          width: 8%;
+        }
+      }
+      .practice-container {
+        width: 100%;
+        padding-left: 2.5rem;
+      }
+      .percentage {
+        width: 100%;
+        padding-left: 2.5rem;
+      }
+      .profile-views {
+        width: 100%;
+        padding-left: 2.5rem;
+      }
+      .lastAccessedBy-info {
+        width: 100%;
+        padding-left: 0px;
+        margin-left: 0px;
+        p {
+          width: 100%;
+          padding-left: 2.5rem;
+        }
+        span {
+          padding-left: 2.5rem;
+        }
+      }
+      .providerInRoster-specialty {
+        width: 100%;
+        padding-left: 2.5rem;
+      }
+    }
+  }
+}
+

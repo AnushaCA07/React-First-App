@@ -1,0 +1,149 @@
+@import '../../styles/_globalstyle';
+
+.roster-details {
+  font-family: 'OpenSans-Regular' !important;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.6rem;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: left !important;
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    margin: auto;
+    padding: 5px;
+    word-break: break-word;
+  }
+
+  .lock-out {
+    width: 4%;
+    margin-top: -25px;
+    margin-left: -5px;
+  }
+
+  .name {
+    width: 22%;
+
+    a {
+      width: 100%;
+      color: @blue-magenta;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 16px !important;
+    }
+  }
+
+  .user-type {
+    width: 15%;
+    justify-content: center;
+
+    span {
+      font-size: 16px !important;
+    }
+  }
+
+  .activation-status {
+    width: 18%;
+    justify-content: center;
+
+    span {
+      font-size: 16px !important;
+    }
+  }
+
+  .provider-number {
+    width: 18%;
+    justify-content: center;
+
+    span {
+      font-size: 16px !important;
+    }
+  }
+
+  .authorization-status {
+    width: 18%;
+    justify-content: center;
+
+    span {
+      font-size: 16px !important;
+    }
+  }
+
+  .edit-authorize {
+    width: 5%;
+
+    .dropbtn {
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 170px;
+      font-size: 14px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      left: auto;
+      right: 4px;
+      margin-top: -5px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #e3e3e3;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+}
+
+.alternate-background {
+  background: @lynx;
+}
+
+.roster-details div:first-child {
+  a {
+    text-decoration: none;
+    color: @neonBlue;
+    padding-left: 0.5rem;
+  }
+}
+
+.roster-details div:last-child {
+  text-align: center;
+  display: inline-block;
+}
+
+@media (max-width: @md) {
+  .roster-details {
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    div {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,336 @@
+/** @format */
+
+@import '../../styles/_globalstyle';
+
+.audit-provider-details {
+  font-family: 'OpenSans-Regular' !important;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.6rem;
+  width: 100%;
+  padding-top: 2rem;
+  min-height: 12rem;
+  padding-bottom: 1.5rem;
+  text-align: left !important;
+  div {
+    display: flex;
+    vertical-align: middle;
+    padding-top: 1rem;
+  }
+  div:last-child {
+    display: block;
+    width: 2rem;
+  }
+  .history-date {
+    margin-left: 2rem;
+    width: 18%;
+    color: @black;
+    line-height: 2.4rem;
+  }
+  .history-auditor {
+    width: 17%;
+    line-height: 2.2rem;
+    display: block;
+    span {
+      color: @black;
+    }
+  }
+  .history-provider {
+    width: 24%;
+    line-height: 2.2rem;
+    display: block;
+
+    span:first-child {
+      color: @neonBlue;
+      display: block;
+      width: 100%;
+      font-weight: bold;
+    }
+    span {
+      color: @gray20;
+    }
+  }
+
+  .status-label {
+    display: inline-flex;
+    font-size: 15px;
+    margin-left: 3px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .status-label-approved {
+    color: @green50;
+    .status-label;
+  }
+  .status-label-rejected {
+    color: @fireEngineRed;
+    .status-label;
+  }
+
+  .history-default {
+    font-family: 'Raleway-Light' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    text-align: center;
+    color: @white;
+    height: 2rem;
+    width: 12%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .type-tag {
+      color: @black;
+      display: bold;
+      font-family: 'OpenSans-Regular' !important;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: left;
+      width: 100%;
+      margin-left: 3%;
+    }
+
+    .Sponsored {
+      background: @green50;
+      border: 1px solid @green50;
+      box-sizing: border-box;
+      border-radius: 31px;
+      width: 74px;
+      padding-top: 0.2rem;
+    }
+    .Standard {
+      background: @nobel;
+      border: 1px solid @nobel;
+      box-sizing: border-box;
+      border-radius: 31px;
+      width: 74px;
+      padding-top: 0.2rem;
+    }
+    .Elective {
+      background: @newBlue;
+      border: 1px solid @newBlue;
+      box-sizing: border-box;
+      border-radius: 31px;
+      width: 74px;
+      padding-top: 0.2rem;
+    }
+  }
+  .history-changes {
+    line-height: 2.2rem;
+    color: @gray20;
+    width: 23%;
+    margin-left: 1rem;
+    display: block;
+    span {
+      display: block;
+    }
+  }
+  .accorion-arrow {
+    width: 3%;
+  }
+  .queue-date {
+    margin-left: 2rem;
+    width: 24%;
+    color: @black;
+    line-height: 2.4rem;
+  }
+  .queue-provider {
+    width: 30%;
+    line-height: 2.2rem;
+    display: block;
+
+    span:first-child {
+      color: @neonBlue;
+      display: block;
+      width: 100%;
+      font-weight: bold;
+    }
+    span {
+      color: @gray20;
+    }
+  }
+  .queue-default {
+    font-family: 'Raleway-Light' !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    text-align: center;
+    color: @white;
+    height: 2rem;
+    width: 18%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .type-tag {
+      color: @black;
+      display: bold;
+      font-family: 'OpenSans-Regular' !important;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: left;
+      width: 65%;
+      margin-left: 3%;
+    }
+
+    .Sponsored {
+      background: @green50;
+      border: 1px solid @green50;
+      box-sizing: border-box;
+      border-radius: 31px;
+      width: 74px;
+      padding-top: 0.2rem;
+    }
+    .Standard {
+      background: @nobel;
+      border: 1px solid @nobel;
+      box-sizing: border-box;
+      border-radius: 31px;
+      width: 74px;
+      padding-top: 0.2rem;
+    }
+    .Elective {
+      background: @newBlue;
+      border: 1px solid @newBlue;
+      box-sizing: border-box;
+      border-radius: 31px;
+      width: 74px;
+      padding-top: 0.2rem;
+    }
+  }
+  .queue-changes {
+    line-height: 2.2rem;
+    color: @gray20;
+    width: 23%;
+    margin-left: 1rem;
+    display: block;
+    span {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: @md) {
+  .audit-header {
+    margin: 0 auto;
+    width: 95%;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  .audit-provider-details {
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    .history-date {
+      width: 60%;
+      padding-bottom: 0.5rem;
+      margin-left: 0rem !important;
+      display: flex;
+      order: 1;
+    }
+    .history-auditor {
+      width: 100%;
+      line-height: 2.2rem;
+      display: block;
+      span {
+        color: @black;
+      }
+    }
+    .history-provider {
+      width: 65%;
+      padding-top: 1rem;
+      margin-left: 0rem !important;
+      display: flex;
+      order: 2;
+      flex-direction: column;
+    }
+    .history-default {
+      padding-right: 0rem;
+      padding-top: 1.5rem;
+      display: flex;
+      order: 1;
+      width: 40%;
+      .Standard {
+        width: 68px;
+      }
+      .Elective {
+        width: 100%;
+      }
+      .Sponsored {
+        width: 68px;
+      }
+    }
+
+    .submitted {
+      width: 100%;
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+      display: flex;
+      order: 3;
+      flex-direction: column;
+    }
+    .history-changes {
+      width: 100%;
+      display: flex;
+      order: 4;
+      flex-direction: column;
+      margin-left: 0px !important;
+    }
+    .accorion-arrow {
+      display: flex;
+      order: 5;
+    }
+    .queue-date {
+      width: 60%;
+      padding-bottom: 0.5rem;
+      margin-left: 0rem !important;
+      display: flex;
+      order: 1;
+    }
+    .queue-provider {
+      width: 65%;
+      padding-top: 1rem;
+      margin-left: 0rem !important;
+      display: flex;
+      order: 2;
+      flex-direction: column;
+    }
+    .queue-default {
+      padding-right: 0rem;
+      padding-top: 1.5rem;
+      display: flex;
+      order: 1;
+      width: 40%;
+      .Standard {
+        width: 68px;
+      }
+      .Elective {
+        width: 100%;
+      }
+      .Sponsored {
+        width: 68px;
+      }
+    }
+    .queue-changes {
+      width: 100%;
+      display: flex;
+      order: 4;
+      flex-direction: column;
+      margin-left: 0px !important;
+    }
+  }
+}

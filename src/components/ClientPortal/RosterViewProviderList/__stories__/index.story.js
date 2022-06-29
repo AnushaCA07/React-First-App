@@ -1,0 +1,255 @@
+import React from 'react';
+import CP_ProviderList from '../ProviderList';
+import { storiesOf } from '@storybook/react';
+import AdminStore from '../../../../../.storybook/store';
+
+const props = {
+  providersFound: 15,
+  providers: [
+    {
+      ProviderName: 'Ryan Peters, CRNA', 
+      ProviderId: '22WD2',
+      Npi: '1678938',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS558',
+        SpecialtyName: 'Nurse Anesthesiology',
+      },
+      Office: {
+        Name: 'Kansas City Office',
+        AddressLine: '3901 Rainbow Blvd',
+        CityState: 'Kansas City, KS 66160',
+      },
+      PercentComplete: 32,
+      ProfileViews : 9,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'employed',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Arlette Shvartzman, MD', 
+      ProviderId: 'XTTWX',
+      Npi: '1922071851',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS158',
+        SpecialtyName: 'Chiropractic',
+      },
+      Office: {
+        Name: 'CHRIS DONIKYAN PRACTICE',
+        AddressLine: '185 Rykowski Ln Ste 101',
+        CityState: ' Middletown, NY',
+      },
+      PercentComplete: 60,
+      ProfileViews : 17,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'employed',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Dean Lehmkuhler, DC', 
+      ProviderId: '38GGK',
+      Npi: '1689605040',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS258',
+        SpecialtyName: 'Diagnostic Radiology',
+      },
+      Office: {
+        Name: 'Spine Fit Clinic',
+        AddressLine: '1013 E Lincolnway',
+        CityState: 'Cheyenne, WY 82001',
+      },
+      PercentComplete: 76,
+      ProfileViews : 27,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'affiliated',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Edward Chow, MD', 
+      ProviderId: 'YG4L4',
+      Npi: '1881608826',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS412',
+        SpecialtyName: 'Internal Medicine',
+      },
+      Office: {
+        Name: 'Dr. Edward A. Chow, MD',
+        AddressLine: '445 Grant Ave',
+        CityState: 'San Francisco, CA 94108',
+      },
+      PercentComplete: 62,
+      ProfileViews : 40,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'standard',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Rita Wright, DMD', 
+      ProviderId: '28KH4',
+      Npi: '1407026701',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS534',
+        SpecialtyName: 'Neurology',
+      },
+      Office: {
+        Name: 'WRIGHTSMILECENTER OF WOODBRIDGE',
+        AddressLine: '3985 Prince William Pkwy Ste 103',
+        CityState: 'Woodbridge, VA 22192',
+      },
+      PercentComplete: 68,
+      ProfileViews : 58,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'employed',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Meg Vannostrand, MD', 
+      ProviderId: 'Y9V8VYZ',
+      Npi: '1861735839',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS534',
+        SpecialtyName: 'Neurology',
+      },
+      Office: {
+        Name: 'New England Neurological Associates, PC',
+        AddressLine: '354 Merrimack St',
+        CityState: 'Lawrence, MA 1843',  
+      },
+      PercentComplete: 68,
+      ProfileViews : 58,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'employed',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Doina Galiatzatos, MD', 
+      ProviderId: 'XKQCP',
+      Npi: '1548206089',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS412',
+        SpecialtyName: 'Internal Medicine',
+      },
+      Office: {
+        Name: 'Kaiser Permanente Hill Road Medical Office Building',
+        AddressLine: '888 S Hill Rd',
+        CityState: 'Ventura, CA 93003', 
+      },
+      PercentComplete: 76,
+      ProfileViews : 67,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'employed',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Polly Reese Jr., DDS', 
+      ProviderId: '33L3G',
+      Npi: '16789117460945738',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS328',
+        SpecialtyName: 'Dentistry',
+      },
+      Office: {
+        Name: '"Winning Smile Dental Group',
+        AddressLine: '2500 Ridge Ave Ste 102',
+        CityState: 'Evanston, IL 60201', 
+      },
+      PercentComplete: 72,
+      ProfileViews : 107,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'employed',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Jeffrey Stewart, DMD', 
+      ProviderId: 'YR5S4',
+      Npi: '1679753602',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS285',
+        SpecialtyName: 'Endodontics',
+      },
+      Office: {
+        Name: 'Dental Associates Of Basking Ridge',
+        AddressLine: '1201 MOUNT KEMBLE AVE',
+        CityState: 'Morristown, NJ 07960', 
+      },
+      PercentComplete: 64,
+      ProfileViews : 123,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'employed',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Daniel Huie, MD', 
+      ProviderId: '2FBDG',
+      Npi: '1295794725',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS305',
+        SpecialtyName: 'Family Medicine',
+      },
+      Office: {
+        Name: 'Menlo Medical Clinic',
+        AddressLine: '321 Middlefield Rd Ste 260',
+        CityState: 'Menlo Park, CA 94025', 
+      },
+      PercentComplete: 76,
+      ProfileViews : 187,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'employed',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Kellie Schaub, DDS', 
+      ProviderId: 'XQ78T',
+      Npi: '1902032030',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS797',
+        SpecialtyName: 'Prosthodontics',
+      },
+      Office: {
+        Name: 'Indianapolis Dental Center',
+        AddressLine: '8445 S Emerson Ave Ste 101',
+        CityState: 'Indianapolis, IN 46237', 
+      },
+      PercentComplete: 66,
+      ProfileViews : 198,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'affiliated',
+      ProvidersChecked : false,
+    },
+    {
+      ProviderName: 'Dr. Niloofar Deyhim, DDS', 
+      ProviderId: 'BI6EZ',
+      Npi: '1407114499',
+      PrimarySpecialty: {
+        SpecialtyCode: 'PS328',
+        SpecialtyName: 'Dentistry',
+      },
+      Office: {
+        Name: 'GENTLE DENTAL PALO ALTO',
+        AddressLine: '853 Middlefield Rd Ste 1',
+        CityState: 'Palo Alto, CA 94301', 
+      },
+      PercentComplete: 48,
+      ProfileViews : 240,
+      LastAccessedBy: 'Roster-Sadem',
+      LastModified : 'December 31, 2021',
+      Status: 'employed',
+      ProvidersChecked : false,
+    },
+  ]
+};
+
+storiesOf('CP_ProviderList', module)
+  .addDecorator((story) => <AdminStore story={story()} />)
+  .add('CP_ProviderList', () => <CP_ProviderList {...props} />);
+

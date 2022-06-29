@@ -1,0 +1,207 @@
+@import '../../../styles/_dashboardglobalstyle.less';
+@import '../../../styles/_globalCommonStyle.less';
+
+.RosterViewDashboard-container {
+  width: 100%;
+  .RosterViewDashboard-inner-container {
+    background: linear-gradient(180.02deg, #ecf7f6 19.28%, #ecf7f6 96.57%);
+    position: relative;
+    .RosterViewDashboard-background-svg {
+      position: absolute;
+      bottom: 0px;
+      max-height: 25%;
+      width: 100%;
+    }
+    .RosterViewDashboard-background-svg-mobile {
+      display: none;
+    }
+
+    .banner-section {
+      height: 635px !important;
+      position: relative;
+      margin: 0 auto;
+      width: 88.5%;
+      display: flex;
+      flex-direction: column;
+      .top-sec {
+        padding-top: 72px;
+        display: flex;
+        width: 100%;
+
+        .heading {
+          color: #4a4a4d;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 60px;
+          line-height: 80px;
+          flex-direction: column;
+          text-align: center;
+          max-width: 69%;
+          margin-top: -1rem !important;
+        }
+      }
+      .sub-sec {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        .subheading-profile-type {
+          width: auto;
+          margin-top: 2em;
+          color: #0404a7;
+          font-size: 25px;
+          font-weight: bold;
+        }
+        .subheading {
+          font-size: 24px;
+          color: #4a4a4d;
+          flex-direction: row;
+          padding-top: 3rem;
+        }
+        .para {
+          color: #4a4a4d;
+          font-size: 16px;
+          line-height: 24px;
+          max-width: 49%;
+          padding-top: 2rem;
+        }
+      }
+    }
+
+    .highlight-section {
+      width: 100%;
+      position: absolute;
+      margin-top: -18rem;
+      z-index: 2;
+      .highlight-section-inner {
+        color: #000000;
+        width: 1192px;
+        margin: 0 auto;
+        text-align: center;
+        background: #ffffff;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+        border-radius: 13px;
+        .cols {
+          width: 33.3%;
+          padding-top: 3rem !important;
+          display: flex;
+          flex-direction: column;
+          .icons {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .count {
+            font-size: 64px;
+            color: #626366;
+            font-weight: 600;
+          }
+          .right-border {
+            background: right url('../../../../assets/images/gray-line.png');
+            background-repeat: no-repeat;
+          }
+          .heading {
+            font-size: 24px;
+            line-height: 32px;
+            color: #4a4a4d;
+          }
+        }
+      }
+    }
+  }
+  .right-align-logo {
+    position: absolute;
+    top: 13rem;
+    opacity: 16%;
+    right: 4rem;
+  }
+}
+.provider-container {
+  width: 100%;
+}
+
+textarea {
+  height: 184px;
+  font-size: 14px !important;
+}
+@media (max-width: @md) { 
+  .RosterViewDashboardbanner-container {
+    .RosterViewDashboardbanner-inner-container {
+      .RosterViewDashboard-background-svg {
+        display: none;
+      }
+      .RosterViewDashboard-background-svg-mobile {
+        display: block;
+      }
+      .banner-section {
+        width: 85%;
+        margin: 0 auto;
+        height: unset !important;
+        display: flex;
+        flex-direction: column;
+        .top-sec {
+          padding-top: 40px;
+          display: flex;
+          width: 100%;
+          .heading {
+            font-size: 24px;
+            line-height: 30px;
+            padding-left: 1rem;
+            max-width: 100%;
+            margin-top: 0rem !important;
+          }
+        }
+        .sub-sec {
+          .subheading-profile-type {
+            display: none !important;
+          }
+        }
+        .subheading {
+          font-size: 20px;
+          line-height: 25px;
+          padding-top: 2rem;
+        }
+        .para {
+          max-width: 100%;
+        }
+      }
+
+      .highlight-section {
+        bottom: -9rem;
+        .highlight-section-inner {
+          width: 85%;
+          margin: 0 auto;
+          .cols {
+            padding-top: 0.5rem !important;
+            .icons {
+              padding-bottom: 2rem;
+            }
+            .count {
+              font-size: 24px;
+              line-height: 30px;
+              font-weight: 600;
+            }
+            .percentage {
+              font-size: 24px;
+              line-height: 30px;
+            }
+            .heading {
+              font-size: 12px;
+              line-height: 16px;
+              padding-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+    .right-align-logo {
+      position: absolute;
+      top: 7rem;
+      right: 0rem;
+    }
+  }
+}
